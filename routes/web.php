@@ -22,5 +22,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 // wallet
 Route::get('/wallet', 'WalletController@index')->name('wallet');
+Route::get('/fund', 'WalletController@fund')->name('fund');
 // product
 Route::get('/buy/{id}/{slug}', 'ProductController@buy')->name('buy');
