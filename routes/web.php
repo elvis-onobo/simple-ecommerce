@@ -23,5 +23,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 // wallet
 Route::get('/wallet', 'WalletController@index')->name('wallet');
 Route::get('/fund', 'WalletController@fund')->name('fund');
+Route::post('/fund-wallet', 'WalletController@fund_wallet')->name('fund-wallet');
 // product
 Route::get('/buy/{id}/{slug}', 'ProductController@buy')->name('buy');
