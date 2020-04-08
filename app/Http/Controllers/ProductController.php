@@ -10,6 +10,6 @@ class ProductController extends Controller
     public function buy($id){
         $product = Product::where('id', $id)->first();
 
-        return view('pages.buy', compact('products'));
+        return view('pages.buy', compact('product'));
     }
 }
