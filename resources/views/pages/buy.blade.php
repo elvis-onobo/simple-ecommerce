@@ -10,13 +10,15 @@
 
     <!-- Stats Board -->
     <div class="row justify-content-center mb-2">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <p class="">You are about to buy <strong>Product 1</strong>
-                    for N15,000</p>
-                    <a href="" class="btn btn-primary">Pay With Wallet</a>
-                    <a href="" class="btn btn-primary">Pay With Card</a>
+                    <div>
+                        <img src="{{ $product->image }}" class="img-responsive" alt="{{ $product->name }}">
+                    </div>
+                    <p class="title">{{ $product->name }}</p>
+                    <p class="">{{ $product->price }}</p>
+                    <a href="{{ route('buy', [ 'id' => $product->id, 'slug'=>$product->slug]) }}" class="btn btn-primary rounded-0">Buy</a>
                 </div>
             </div>
         </div>
