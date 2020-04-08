@@ -18,7 +18,7 @@
                 <div class="card-body text-center">
                     <p class="display-4">2,000</p>
                     <p class="small text-center">Wallet Balance</p>
-                    <a href="{{ route('fund') }}" class="btn btn-primary rounded-0">Fund Wallet</a>
+                    <a href="{{ route('enter-funds') }}" class="btn btn-primary rounded-0">Fund Wallet</a>
                     <a href="" class="btn btn-primary rounded-0">Gift Funds</a>
                     <a href="" class="btn btn-primary rounded-0">History</a>
                 </div>

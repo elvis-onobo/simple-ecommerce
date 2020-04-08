@@ -8,7 +8,8 @@
                 <div class="card-header">{{ __('Fund Your Wallet') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('fund-wallet') }}">
+                    <!-- action="{{ route('fund-wallet') }}" -->
+                    <form method="POST" action="fund-wallet">
                         @csrf
 
                         <div class="form-group row">
