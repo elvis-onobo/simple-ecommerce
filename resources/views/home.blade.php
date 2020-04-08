@@ -30,22 +30,21 @@
     <!-- //Stats Board -->
 
     <div class="row justify-content-center">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <p class="display-4">Product 1</p>
-                    <a href="{{ route('buy') }}" class="btn btn-primary rounded-0">Buy</a>
+            @foreach($products as $product)
+            <div class="col-md-4 mb-2">
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+                            <img src="{{ $product->image }}" class="img-responsive" alt="{{ $product->name }}">
+                        </div>
+                        <p class="title">{{ $product->name }}</p>
+                        <p class="">{{ $product->price }}</p>
+                        <a href="{{ route('buy', [ 'id' => $product->id, 'slug'=>$product->slug]) }}" class="btn btn-primary rounded-0">Buy</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <p class="display-4">Product 2</p>
-                    <a href="" class="btn btn-primary rounded-0">Buy</a>
-                </div>
-            </div>
-        </div>
+            @endforeach
+            {{ $products->links() }}
 
     </div>
 </div>
