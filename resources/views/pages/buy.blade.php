@@ -16,9 +16,12 @@
                     <div>
                         <img src="{{ $product->image }}" class="img-responsive" alt="{{ $product->name }}">
                     </div>
-                    <p class="title">{{ $product->name }}</p>
-                    <p class="">{{ $product->price }}</p>
-                    <a href="{{ route('buy', [ 'id' => $product->id, 'slug'=>$product->slug]) }}" class="btn btn-primary rounded-0">Buy</a>
+                    <div class="card-body">
+                        <p class="title">You have ordered <strong>{{ ucwords($product->name) }}</strong></p>
+                        <p class="">&#8358;{{ number_format($product->price) }}</p>
+                        <a href="{{ route('buy', [ 'id' => $product->id, 'slug'=>$product->slug]) }}" class="btn btn-primary rounded-0">Pay With Card</a>
+                        <a href="{{ route('buy', [ 'id' => $product->id, 'slug'=>$product->slug]) }}" class="btn btn-primary rounded-0">Pay From Wallet</a>
+                    </div>
                 </div>
             </div>
         </div>

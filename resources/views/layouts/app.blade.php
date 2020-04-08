@@ -58,7 +58,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="">
+                                    <a class="dropdown-item" href="{{ url('home') }}">
                                         {{ __('Shop') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('wallet') }}">
