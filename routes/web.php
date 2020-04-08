@@ -23,4 +23,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 // wallet
 Route::get('/wallet', 'WalletController@index')->name('wallet');
 // product
-Route::get('/buy', 'ProductController@buy')->name('buy');
+Route::get('/buy/{id}/{slug}', 'ProductController@buy')->name('buy');
