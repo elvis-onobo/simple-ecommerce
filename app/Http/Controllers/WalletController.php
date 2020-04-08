@@ -10,16 +10,11 @@ class WalletController extends Controller
         return view('pages.wallet');
     }
 
-    public function fund(){
+    public function enter_fund(){
         return view('pages.fund');
     }
 
-    public function fund_wallet(Request $request){
-        session([
-            'amount' => $request->amount,
-            'user_id' => auth()->user()->id
-        ]);
+    public function verify(reference){
 
-        return view('pages.deposit')
     }
 }
