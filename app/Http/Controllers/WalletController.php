@@ -67,7 +67,6 @@ class WalletController extends Controller
         return view('pages.gift');
     }
 
-
     // transfer the money to the recipient
     public function gift_fund(Request $request){
         // check if user exits
@@ -92,7 +91,6 @@ class WalletController extends Controller
             }
         }
     }
-
 
     // verifies the transaction
     public function verify($reference){
@@ -121,4 +119,10 @@ class WalletController extends Controller
         return back()->with('error', 'This transaction could not be verified!');
     }
 
+    // get a user's wallet history
+    public function history(){
+        $history = Wallet::where('user_id', auth()->user()->id)->simplePaginate(20);
+
+        return view('pages.wallet-history', compact('history'));
+    }
 }
