@@ -23,7 +23,7 @@
                     @endif
                     <p class="small text-center">Wallet Balance</p>
                     <a href="{{ route('enter-funds') }}" class="btn btn-primary rounded-0">Fund Wallet</a>
-                    <a href="" class="btn btn-primary rounded-0">Gift Funds</a>
+                    <a href="{{ route('gift') }}" class="btn btn-primary rounded-0">Gift Funds</a>
                     <a href="" class="btn btn-primary rounded-0">History</a>
                 </div>
             </div>
