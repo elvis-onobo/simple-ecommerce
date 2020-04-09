@@ -25,6 +25,8 @@ Route::get('/wallet', 'WalletController@index')->name('wallet');
 Route::get('/enter-funds', 'WalletController@enter_fund')->name('enter-funds');
 Route::post('/fund-wallet', 'WalletController@fund_wallet')->name('fund-wallet');
 Route::get('/fund-wallet', 'WalletController@fund_wallet')->name('fund-wallet');
+Route::get('/gift', 'WalletController@gift')->name('gift');
+Route::post('/gift', 'WalletController@gift_fund')->name('gift-fund');
 Route::get('/verify/{reference}', 'WalletController@verify')->name('verify');
 // product
 Route::get('/buy/{id}/{slug}', 'ProductController@buy')->name('buy');
