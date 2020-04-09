@@ -17,6 +17,8 @@ class CreateWalletsTable extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->string('balance');
+            $table->string('reference');
+            $table->string('authorization');
             $table->string('nature_of_tranx');
             $table->timestamps();
         });
