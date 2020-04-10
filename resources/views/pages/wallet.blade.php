@@ -19,7 +19,7 @@
                     @if($wallet_balance === 0)
                     <p class="display-4">&#8358;000</p>
                     @else
-                    <p class="display-4">&#8358;{{ $wallet_balance }}</p>
+                    <p class="display-4">&#8358;{{ number_format($wallet_balance) }}</p>
                     @endif
                     <p class="small text-center">Wallet Balance</p>
                     <a href="{{ route('enter-funds') }}" class="btn btn-primary rounded-0">Fund Wallet</a>
