@@ -39,6 +39,7 @@
 </div>
 
 <script>
+var base_url = {!! json_encode(URL::to('/'), JSON_HEX_TAG)  !!};
 var amount = {!! json_encode(session('amount')*100, JSON_HEX_TAG)  !!};
 var user = {!! json_encode(md5(auth()->user()->id), JSON_HEX_TAG)  !!};
 var email = {!! json_encode(auth()->user()->email, JSON_HEX_TAG)  !!};
@@ -51,11 +52,10 @@ PaystackPop.setup({
     metadata: {
         user
     },
-
     container: 'paystackEmbedContainer',
     callback: function(response){
 
-    window.location.href= window.location.origin+'/public/verify/'+response.reference;
+    window.location.href= base_url+'/verify/'+response.reference;
     },
 });
 </script>
