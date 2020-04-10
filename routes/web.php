@@ -21,7 +21,7 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 // wallet
-Route::middleware('verified')->group(function (){
+Route::middleware('verified', 'auth')->group(function (){
     Route::get('/wallet', 'WalletController@index')->name('wallet');
     Route::get('/enter-funds', 'WalletController@enter_fund')->name('enter-funds');
     Route::post('/fund-wallet', 'WalletController@fund_wallet')->name('fund-wallet');
