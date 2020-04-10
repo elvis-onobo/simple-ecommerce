@@ -25,7 +25,11 @@
                     <div class="text-center">
                         <a href="#"  >Terms and Conditions Apply</a>
                     </div>
-
+                    <div>
+                        <p>Card Number: 408 408 408 408 408 1</p>
+                        <p>Date: Any date in the future</p>
+                        <p>CVV: 408</p>
+                    </div>
 
                 </div>
 
@@ -51,7 +55,7 @@ PaystackPop.setup({
     container: 'paystackEmbedContainer',
     callback: function(response){
 
-    window.location.href= '/crenettech/public/verify/'+response.reference;
+    window.location.href= window.location.origin+'/public/verify/'+response.reference;
     },
 });
 </script>
