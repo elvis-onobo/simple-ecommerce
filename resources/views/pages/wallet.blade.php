@@ -2,18 +2,22 @@
 
 @section('content')
 <div class="container">
-    @if (session('status'))
-        <div class="alert alert-success" role="alert">
-            {{ session('status') }}
-        </div>
-    @endif
-
     <!-- Stats Board -->
     <div class="row">
 
     </div>
     <div class="row justify-content-center">
         <div class="col-md-6">
+            @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
+                </div>
+            @endif
+            @if (session('error'))
+                <div class="alert alert-danger" role="alert">
+                    {{ session('error') }}
+                </div>
+            @endif
             <div class="card bg-danger text-white">
                 <div class="card-body text-center">
                     @if($wallet_balance === 0)
