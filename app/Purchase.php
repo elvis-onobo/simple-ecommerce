@@ -9,5 +9,5 @@ class Purchase extends Model
     /*
     * Mass assign
     */
-    protected $fillable = ['user_id', 'product_id'];
+    protected $fillable = ['user_id', 'product_id', 'price', 'reference', 'authorization'];
 }
