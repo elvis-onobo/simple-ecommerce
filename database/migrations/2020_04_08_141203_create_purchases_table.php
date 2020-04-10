@@ -17,6 +17,9 @@ class CreatePurchasesTable extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->foreignId('product_id');
+            $table->string('price');
+            $table->string('reference');
+            $table->string('authorization');
             $table->timestamps();
         });
     }
