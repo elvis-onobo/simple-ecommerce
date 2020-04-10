@@ -1,100 +1,43 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+@section('content')
+<div class="container">
+    @if (session('status'))
+        <div class="alert alert-success" role="alert">
+            {{ session('status') }}
         </div>
-    </body>
-</html>
+    @endif
+    @if (session('error'))
+        <div class="alert alert-danger" role="alert">
+            {{ session('error') }}
+        </div>
+    @endif
+
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <p class="display-4">Welcome to SimpleCommerce</p>
+            <h1 class="col-md-8" style="font-size: 2em;">By Elvis Onobo</h1>
+            <p class="col-md-8">
+                SimpleCommerce is a light minimalist website where you can do your
+                everyday shopping for groceries, households, clothes, electronics
+                and more.
+            </p>
+            <p class="col-md-8">
+                SimpleCommerce is very easy to use. All you have to do is Register/Login
+                and make a purchase directly with your Debit Card or if you prefer to have
+                more speed, you can just fund your wallet and do your shopping with just
+                with just one click.
+            </p>
+            <p class="col-md-8">
+                It's a demo website so don't have your hopes too high because you will
+                be shopping dummy stuff but you can totally use it to simulate your spending
+                when you end up having the money. Lol!
+            </p>
+            <p class="col-md-8">Find the code for this project on my <a href="http://github.com/elvis-onobo/simple-ecommerce" target="_blank">Github</a></p>
+            <p class="col-md-8">Feel free to mail me at elvis[dot]onobo[at]gmail[dot]com</p>
+        </div>
+    </div>
+
+
+</div>
+@endsection
