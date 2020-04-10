@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Purchase;
 use App\Product;
+use App\Wallet;
 
 class HomeController extends Controller
 {
@@ -26,7 +28,9 @@ class HomeController extends Controller
     public function index()
     {
         $products = Product::paginate(3);
+        $wallet = Wallet::where('user_id', auth()->user()->id)->pluck('balance')->sum();
+        $spent = Purchase::where('user_id', auth()->user()->id)->pluck('price')->sum();
 
-        return view('home', compact('products'));
+        return view('home', compact('products', 'wallet', 'spent'));
     }
 }
