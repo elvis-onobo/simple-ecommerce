@@ -31,3 +31,4 @@ Route::get('/verify/{reference}', 'WalletController@verify')->name('verify');
 Route::get('/history', 'WalletController@history')->name('history');
 // product
 Route::get('/buy/{id}/{slug}', 'ProductController@buy')->name('buy');
+Route::get('/buy-from-wallet/{id}', 'ProductController@buy_from_wallet')->name('buy-from-wallet');
