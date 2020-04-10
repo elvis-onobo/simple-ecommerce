@@ -18,7 +18,7 @@
         <div class="col-md-4">
             <div class="card bg-success text-white">
                 <div class="card-body">
-                    <p class="display-4 text-center">2,000</p>
+                    <p class="display-4 text-center">&#8358;{{ number_format($wallet) }}</p>
                     <p class="small text-center">Wallet Balance</p>
                 </div>
             </div>
@@ -26,8 +26,8 @@
         <div class="col-md-4">
             <div class="card bg-info text-white">
                 <div class="card-body">
-                    <p class="display-4 text-center">2,000</p>
-                    <p class="small text-center">Gift Received</p>
+                    <p class="display-4 text-center">&#8358;{{ number_format($spent) }}</p>
+                    <p class="small text-center">Total Spent</p>
                 </div>
             </div>
         </div>
