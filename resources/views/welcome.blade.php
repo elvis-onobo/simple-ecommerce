@@ -15,7 +15,7 @@
 
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <p class="display-4">Welcome to SimpleCommerce</p>
+            <p class="col-md-10" style="font-size: 3em;">Welcome to SimpleCommerce</p>
             <h1 class="col-md-8" style="font-size: 2em;">By Elvis Onobo</h1>
             <p class="col-md-8">
                 SimpleCommerce is a light minimalist website where you can do your
