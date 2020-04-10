@@ -47,7 +47,10 @@ class ProductController extends Controller
             if ($this->deduct(auth()->user()->id, $product->price, $product->name)) {
                 if(Purchase::create([
                     'user_id'=>auth()->user()->id,
-                    'product_id'=> $id
+                    'product_id'=> $id,
+                    'price'=> $product->price,
+                    'reference'=> 'nil',
+                    'authorization'=> 'nil'
                 ])){
                 return back()->with('status', 'You have successfully purchased '.$product->name.' at '.$product->price.' naira');
                 };
