@@ -34,4 +34,14 @@ class PurchaseController extends Controller
         }
         return back()->with('error', 'This transaction could not be verified!');
     }
+
+    // get a user's spenting history
+    public function history(){
+        $purchase = Purchase::where('user_id', auth()->user()->id)
+                    ->join('products', 'purchases.product_id', '=', 'products.id' )
+                    ->select('products.name', 'purchases.price', 'purchases.created_at' )
+                    ->simplePaginate(20);
+
+        return view('pages.purchase-history', compact('purchase'));
+    }
 }
