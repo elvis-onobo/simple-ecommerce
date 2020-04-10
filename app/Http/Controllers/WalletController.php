@@ -98,7 +98,6 @@ class WalletController extends Controller
         $uri ='https://api.paystack.co/transaction/verify/'.$reference;
 
         $response = Http::withToken($secret_key)->get($uri);
-        return $response;
         // check if data returned a success case then save ro DB
         if($response['data']['status'] === 'success'){
             // check if the user is the same user that made the payment
