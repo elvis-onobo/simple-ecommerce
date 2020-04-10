@@ -10,6 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
@@ -60,7 +61,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ url('home') }}">
-                                        {{ __('Shop') }}
+                                        {{ __('Purchase History') }}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('wallet') }}">
                                         {{ __('Wallet') }}
