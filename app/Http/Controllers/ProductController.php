@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 use App\Purchase;
 use App\Product;
@@ -55,4 +56,5 @@ class ProductController extends Controller
             return back()->with('error', "Transaction failed, Insufficient funds!");
         }
     }
+
 }
