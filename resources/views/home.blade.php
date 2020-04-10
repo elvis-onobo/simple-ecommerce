@@ -18,7 +18,7 @@
         <div class="col-md-4">
             <div class="card bg-success text-white">
                 <div class="card-body">
-                    @if(count($wallet)> 0 )
+                    @if($wallet > 0 )
                     <p class="display-4 text-center">&#8358;{{ number_format($wallet) }}</p>
                     @else
                     <p class="display-4 text-center">Nothing</p>
@@ -30,7 +30,7 @@
         <div class="col-md-4">
             <div class="card bg-info text-white">
                 <div class="card-body">
-                    @if(count($spent)> 0 )
+                    @if($spent > 0 )
                     <p class="display-4 text-center">&#8358;{{ number_format($spent) }}</p>
                     @else
                     <p class="display-4 text-center">Chai!</p>
