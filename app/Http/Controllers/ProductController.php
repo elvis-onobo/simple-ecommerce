@@ -33,6 +33,13 @@ class ProductController extends Controller
     * END REUSABLE METHODS
     */
 
+    // return a list of the products
+    public function listing(){
+        $products = Product::paginate(3);
+
+        return view('pages.listing', compact('products'));
+    }
+
     public function buy($id){
         $product = Product::where('id', $id)->first();
 
