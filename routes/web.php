@@ -36,3 +36,6 @@ Route::middleware('auth')->group(function (){
     Route::get('/card-buy/verify/{reference}', 'PurchaseController@verify')->name('verify-purchase');
     Route::get('/purchase-history', 'PurchaseController@history')->name('purchase-history');
 });
+
+// unauthenticated product listing
+Route::get('/listing', 'ProductController@listing')->name('listing');
