@@ -54,7 +54,6 @@
                         <p class="title">{{ ucwords($product->name) }}</p>
                         <p class="">&#8358;{{ number_format($product->price) }}</p>
                         <a href="{{ route('buy', [ 'id' => $product->id, 'slug'=>$product->slug]) }}" class="btn btn-primary rounded-0">Buy</a>
-                        <a href="" class="btn btn-warning rounded-0">Add to Cart</a>
                     </div>
                 </div>
             </div>

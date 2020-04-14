@@ -57,6 +57,8 @@ class WalletController extends Controller
 
     // fund wallet route
     public function fund_wallet(Request $request){
+        $request->validate(['amount' => 'required']);
+
         session(['amount'=>$request->amount]);
 
         return view('pages.fund-wallet');
@@ -69,6 +71,10 @@ class WalletController extends Controller
 
     // transfer the money to the recipient
     public function gift_fund(Request $request){
+        $request->validate([
+            'amount' => 'required',
+            'email' => 'required|email'
+        ]);
         // check if user exits
         if ($this->userExists($request->email)) {
             $user = $this->userExists($request->email);
