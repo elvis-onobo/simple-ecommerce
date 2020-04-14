@@ -35,6 +35,10 @@
             </p>
             <p class="col-md-8">Find the code for this project on my <a href="http://github.com/elvis-onobo/simple-ecommerce" target="_blank">Github</a></p>
             <p class="col-md-8">Feel free to mail me at elvis[dot]onobo[at]gmail[dot]com</p>
+
+            <div class="col-md-8">
+                <a href="{{ route('listing') }}" class="btn btn-primary rounded-0">Visit Shop</a>
+            </div>
         </div>
     </div>
 
