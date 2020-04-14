@@ -49,4 +49,4 @@
 # Cache files of the following types for 1 week
 <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|svg)$">
 Header set Cache-Control "max-age=604800, public"
-</FilesMatch
+</FilesMatch>
